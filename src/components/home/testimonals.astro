@@ -1,0 +1,62 @@
+---
+export const TESTIMONIALS = [
+	{
+		id: 0,
+		avatar: "/assets/avatar-kady.jpg",
+		quote:
+			" “The team perfectly fit the specialized skill set required. They focused on the most essential features helping us launch the platform eight months faster than planned.” ",
+		name: "Kady Baker",
+		position: "Product Manager at Bookmark",
+	},
+	{
+		id: 1,
+		avatar: "/assets/avatar-aiysha.jpg",
+		quote:
+			"“We needed to automate our entire onboarding process. The team came in and built out the whole journey. Since going live, user retention has gone through the roof!”",
+		name: "Aiysha Reese",
+		position: "Founder of Manage",
+	},
+	{
+		id: 2,
+		avatar: "/assets/avatar-arthur.jpg",
+		quote:
+			"“Amazing. Our team helped us build an app that delivered a new experience for hiring a physio. The launch was an instant success with 100k downloads in the first month.”",
+		name: "Arthur Clarke",
+		position: "Co-founder of MyPhysio",
+	},
+];
+---
+
+<ul class="grid gap-[5.5rem] xl:grid-cols-3 xl:gap-[30px]">
+	{
+		TESTIMONIALS.map((item, i) => (
+			<li class="grid gap-4 xl:gap-6">
+				<div class="relative grid place-items-center text-center">
+					<img
+						class="pointer-events-none absolute inset-x-0 -top-9 left-[40%] md:left-[44%] lg:left-[46%]"
+						src="/assets/icon-quotes.svg"
+						alt="quotes icon"
+						width="67"
+						height="56"
+					/>
+					<p class="body-font2 z-10 md:max-w-[60ch]">{item.quote}</p>
+				</div>
+				<div class="grid place-items-center gap-4 xl:gap-6">
+					<div class="text-center">
+						<p class="text-secondary-green-400">{item.name}</p>
+						<small class="mb-2 font-normal italic">{item.position}</small>
+					</div>
+					<div>
+						<img
+							class="rounded-full border-2 border-[#C4FFFE]"
+							src={item.avatar}
+							width={62}
+							height={62}
+							alt={item.name}
+						/>
+					</div>
+				</div>
+			</li>
+		))
+	}
+</ul>

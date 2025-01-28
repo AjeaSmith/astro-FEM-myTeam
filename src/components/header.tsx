@@ -2,8 +2,6 @@
 import { useState } from "react";
 import PrimaryButton from "./ui/buttons/primary-button";
 
-// TODO: hook up js for navbar
-// TODO: set up styles
 // TODO: coding in public for creating reusable button components
 
 const Header = () => {

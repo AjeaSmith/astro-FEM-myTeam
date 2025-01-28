@@ -1,20 +1,104 @@
 ---
-
-import Layout from '../layouts/Layout.astro';
-
+import SectionHeading from "../components/section-heading";
+import Layout from "../layouts/Layout.astro";
+import TeamSkills from "../components/home/team-skills.astro";
+import Testimonals from "../components/home/testimonals.astro";
+import Footer from "../components/footer/footer.astro";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-	<h1>Lorem ipsum dolor sit amet?</h1>
-	<h2>Lorem ipsum dolor sit amet</h2>
-	<h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde omnis ipsa voluptatum voluptatem, pariatur veniam?</h2>
+	<img
+		class="absolute -inset-28 top-16 hidden xl:top-[13rem] xl:block"
+		src="/assets/bg-pattern-home-1.svg"
+		alt="presentation"
+		width={200}
+		height={200}
+	/>
 
-	<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam quis exercitationem commodi totam repudiandae, aliquid repellendus laudantium magnam veritatis doloremque reprehenderit nobis? Deleniti ipsa unde, vero voluptate ipsam tempore.</p>
+	<section class="container grid place-items-center gap-[97px] md:gap-[157px]">
+		<SectionHeading>
+			<h1
+				class="h1 | mx-auto sm:leading-[56px] md:max-w-[10ch] xl:max-w-[170ch] xl:leading-[100px]"
+			>
+				Find the best <span class="text-primary-coral">talent</span>
+			</h1>
 
-	<p class="body-sm">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam veniam quis exercitationem commodi totam repudiandae, aliquid repellendus laudantium magnam veritatis doloremque reprehenderit nobis? Deleniti ipsa unde, vero voluptate ipsam tempore.
-	</p>
+			<div class="xl:grid xl:gap-[79px] xl:place-self-center">
+				<div
+					class="hidden xl:block xl:w-[40px] xl:border-b-4 xl:border-secondary-green-400"
+				>
+				</div>
+				<p class="body-font2 xl:body-font opacity-80 xl:max-w-[375px]">
+					Finding the right people and building high performing teams can be
+					hard. Most companies aren’t tapping into the abundance of global
+					talent. We’re about to change that.
+				</p>
+			</div>
+		</SectionHeading>
+		<img
+			class="xl:place-self-end"
+			src="/assets/bg-pattern-home-2.svg"
+			alt="presentation"
+			width={358}
+			height={100}
+		/>
+	</section>
 
-	
+	<section class="relative overflow-hidden bg-secondary-green-700">
+		<img
+			class="absolute -right-[98px] xl:bottom-0 xl:place-self-end"
+			src="/assets/bg-pattern-home-3.svg"
+			alt="presentation"
+			width={200}
+			height={244}
+		/>
+		<div
+			class="container grid gap-[56px] py-[64px] md:gap-[64px] md:py-[100px] xl:grid-cols-[.90fr_,auto] xl:place-content-between xl:place-items-start xl:gap-8"
+		>
+			<div class="grid gap-8">
+				<div class="w-[40px] border-b-4 border-primary-coral"></div>
+				<h3
+					class="h3 max-w-[11ch] md:max-w-[25ch] md:text-[32px] xl:text-[48px] xl:leading-[48px]"
+				>
+					Build & manage distributed teams like no one else.
+				</h3>
+			</div>
+
+			<div>
+				<TeamSkills />
+			</div>
+		</div>
+	</section>
+
+	<section class="relative overflow-hidden bg-secondary-green-600">
+		<img
+			src="/assets/bg-pattern-home-4-about-3.svg"
+			alt="presentation"
+			width="147"
+			height="100"
+		/>
+		<div class="container mb-[8rem] grid gap-12">
+			<h3
+				class="h3 mx-auto mb-12 mt-10 text-center lg:max-w-[30ch] lg:leading-[48px] xl:max-w-[32ch]"
+			>
+				Delivering real results for top companies. Some of our
+				<span class="text-secondary-green-400"> success stories.</span>
+			</h3>
+
+			<div class="z-10">
+				<Testimonals />
+			</div>
+		</div>
+		<img
+			class="absolute bottom-0 right-0"
+			src="/assets/bg-pattern-home-5.svg"
+			alt="presentation"
+			width="147"
+			height="100"
+		/>
+	</section>
+
+	<Footer cta />
 </Layout>

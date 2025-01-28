@@ -1,0 +1,39 @@
+---
+const HOMELIST = [
+	{
+		id: 0,
+		url: "/assets/icon-person.svg",
+		title: "Experienced Individuals",
+		description:
+			"Our network is made up of highly experienced professionals who are passionate about what they do.",
+	},
+	{
+		id: 1,
+		url: "/assets/icon-cog.svg",
+		title: "Easy to Implement",
+		description:
+			"Our processes have been refined over years of implementation meaning our teams always deliver.",
+	},
+	{
+		id: 2,
+		url: "/assets/icon-chart.svg",
+		title: "Enhanced Productivity",
+		description:
+			"Our customized platform with in-built analytics helps you manage your distributed teams.",
+	},
+];
+---
+
+<ul class="grid gap-12">
+	{
+		HOMELIST.map((item) => (
+			<li class="grid place-items-center gap-4 text-center md:grid-cols-[auto_,1fr] md:place-items-start md:gap-[23px] md:text-left">
+				<img src={item.url} alt="presentation" width={72} height={72} />
+				<div class="space-y-2 md:max-w-[44ch] xl:max-w-[42ch]">
+					<p class="text-primary-coral">{item.title}</p>
+					<p class="body-font2 opacity-75">{item.description}</p>
+				</div>
+			</li>
+		))
+	}
+</ul>
